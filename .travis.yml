@@ -32,3 +32,5 @@ after_script:
   - nordselect nl double
   - nordselect -h
   - nordselect --list-filters
+  - sudo setcap cap_net_raw+ep "/usr/bin/nordselect"
+  - nordselect -p be
