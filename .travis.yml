@@ -11,7 +11,6 @@ matrix:
 before_install:
   - sudo apt-get install -y curl
   - sudo apt-get update
-  - sudo apt-get purge -y postgresql-9.3 postgresql-9.4 postgresql-9.5 postgresql-9.6
 
 # Load some dummy data for testing.
 before_script:
@@ -20,7 +19,7 @@ before_script:
 
 # Test the binary. TODO: Should become integrated in a better way.
 after_script:
-  - sudo cargo install
+  - cargo install
   - nordselect
   - nordselect za standard
   - nordselect us p2p
