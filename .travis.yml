@@ -19,3 +19,16 @@ before_install:
 before_script:
   - chmod +x ./dummydata.sh
   - ./dummydata.sh
+
+# Test the binary. TODO: Should become integrated in a better way.
+after_script:
+  - sudo cargo install
+  - nordselect
+  - nordselect za standard
+  - nordselect us p2p
+  - nordselect de dedicated
+  - nordselect se tor
+  - nordselect ee obfuscated
+  - nordselect nl double
+  - nordselect -h
+  - nordselect --list-filters
