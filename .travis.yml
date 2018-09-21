@@ -31,3 +31,4 @@ after_script:
   - nordselect --list-filters
   - sudo setcap cap_net_raw+ep "/home/travis/.cargo/bin/nordselect"
   - nordselect -p be
+  - nords
